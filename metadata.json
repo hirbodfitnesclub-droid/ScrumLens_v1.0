@@ -1,0 +1,6 @@
+{
+  "name": "ScrumLens",
+  "description": "ScrumLens — داشبورد بینش اسکرام‌مستر برای آژانس دیجیتال مارکتینگ",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

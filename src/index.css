@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-ink: var(--ink);
+  --color-surface: var(--surface);
+  --color-muted-text: var(--muted-text);
+  --color-muted-light: var(--muted-light);
+  
+  --font-sans: "Vazirmatn", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-3xl: 24px;
+}
+
+:root {
+  --accent: #C9F24D;
+  --accent-hover: #B8DF40;
+  --ink: #111111;
+  --surface: #F4F5F1;
+  --muted-text: #8E9185;
+  --muted-light: #E5E6E0;
+}
+
+body {
+  background-color: var(--surface);
+  color: var(--ink);
+  font-family: "Vazirmatn", "Inter", sans-serif;
+  overflow-x: hidden;
+  direction: rtl;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--muted-light);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-text);
+}
