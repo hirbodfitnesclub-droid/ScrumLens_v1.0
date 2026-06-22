@@ -5,6 +5,7 @@ import OverviewKpis from "../components/overview/OverviewKpis";
 import ProductivityChart from "../components/overview/ProductivityChart";
 import ProjectsDistribution from "../components/overview/ProjectsDistribution";
 import EmptyState from "../components/common/EmptyState";
+import SyncWidget from "../components/overview/SyncWidget";
 import { useTasks } from "../data/tasks";
 import { useUiStore } from "../store/useUiStore";
 import { useTeamDetail } from "../data/teams";
@@ -61,6 +62,9 @@ export default function Overview() {
             </span>
           </div>
         </div>
+
+        {/* Sync Status Banner */}
+        <SyncWidget />
 
         {/* Filter Toolbar */}
         <FilterBar />
