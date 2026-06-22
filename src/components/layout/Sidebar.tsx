@@ -8,7 +8,6 @@ import {
   CalendarCheck, 
   FileSpreadsheet, 
   Settings,
-  LogOut,
   Sparkles
 } from "lucide-react";
 import { cn } from "../../lib/utils";
@@ -21,7 +20,7 @@ interface SidebarProps {
 
 export default function Sidebar({ className }: SidebarProps) {
   const location = useLocation();
-  const { user, logout } = useAuth();
+  const { user } = useAuth();
 
   const menuItems = [
     { id: "overview", label: "داشبورد اصلی", path: "/", icon: LayoutDashboard },
@@ -85,10 +84,10 @@ export default function Sidebar({ className }: SidebarProps) {
         </nav>
       </div>
 
-      {/* User Session Profile and Logout */}
+      {/* User Session Profile */}
       <div className="border-t border-muted-light/40 pt-4 flex flex-col gap-3">
         {user && (
-          <div className="flex items-center gap-3 px-3 py-2 bg-muted-light/10 rounded-2xl border border-muted-light/20">
+          <div className="flex items-center gap-3 px-3 py-2 bg-muted-light/10 rounded-2xl border border-muted-light/20 font-sans">
             <div className="h-10 w-10 rounded-full bg-ink text-accent flex items-center justify-center font-bold text-sm">
               {user.name.charAt(0)}
             </div>
@@ -98,14 +97,6 @@ export default function Sidebar({ className }: SidebarProps) {
             </div>
           </div>
         )}
-
-        <button
-          onClick={() => logout()}
-          className="flex w-full items-center gap-3 px-4 py-3 text-sm font-semibold text-rose-600 hover:bg-rose-50 rounded-2xl transition-colors group cursor-pointer"
-        >
-          <LogOut className="h-5 w-5 transition-transform group-hover:-translate-x-0.5" />
-          <span>خروج از حساب</span>
-        </button>
       </div>
     </aside>
   );
